@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html class="js"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>Welcome | Pico</title>
+            <meta name="description" content="Pico is a stupidly simple, blazing fast, flat file CMS.">
+    
+            <link rel="canonical" href="a.html">
+    
+    <link rel="stylesheet" href="a_data/style.css" type="text/css">
+    <link rel="stylesheet" href="a_data/droidsans.css" type="text/css">
+    <link rel="stylesheet" href="a_data/fontello.css" type="text/css">
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false" tabindex="1">
+                <span class="icon-menu" aria-hidden="true"></span>
+                <span class="sr-only">Toggle Menu</span>
+            </a>
+            <h1>
+                <a href="http://eceborgfzq.cluster021.hosting.ovh.net/">Pico</a>
+            </h1>
+            <div id="nav" role="region" tabindex="-1" class="">
+                <ul>
+                                                                                                <li class="active">
+                                <a href="http://eceborgfzq.cluster021.hosting.ovh.net/">Welcome</a>
+                            </li>
+                                                                                                                        <li>
+                                <a href="http://eceborgfzq.cluster021.hosting.ovh.net/?sub">Sub Page Index</a>
+                            </li>
+                                                                                                                                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <h2>Welcome to Pico</h2>
+<p>Congratulations, you have successfully installed <a href="http://picocms.org/">Pico</a> 2.0.2.
+Pico is a stupidly simple, blazing fast, flat file CMS. <!-- replaced by the above Description header --></p>
+<h2>Creating Content</h2>
+<p>Pico is a flat file CMS. This means there is no administration backend or
+database to deal with. You simply create <code>.md</code> files in the <code>content</code> folder
+and those files become your pages. For example, this file is called <code>index.md</code>
+and is shown as the main landing page.</p>
+<p>When you install Pico, it comes with some sample contents that will display
+until you add your own content. Simply add some <code>.md</code> files to your <code>content</code>
+folder in Pico's root directory. No configuration is required, Pico will
+automatically use the <code>content</code> folder as soon as you create your own
+<code>index.md</code>. Just check out <a href="https://github.com/picocms/Pico/tree/master/content-sample">Pico's sample contents</a> for an
+example!</p>
+<p>If you create a folder within the content directory (e.g. <code>content/sub</code>) and
+put an <code>index.md</code> inside it, you can access that folder at the URL
+<code>http://eceborgfzq.cluster021.hosting.ovh.net/?sub</code>. If you want another page within the sub folder, simply create
+a text file with the corresponding name and you will be able to access it
+(e.g. <code>content/sub/page.md</code> is accessible from the URL <code>http://eceborgfzq.cluster021.hosting.ovh.net/?sub/page</code>).
+Below we've shown some examples of locations and their corresponding URLs:</p>
+<div class="table-responsive"><table style="width: 100%; max-width: 40em;"><thead><tr><th style="width: 50%;">Physical Location</th>
+            <th style="width: 50%;">URL</th>
+        </tr></thead><tbody><tr><td>content/index.md</td>
+            <td><a href="http://eceborgfzq.cluster021.hosting.ovh.net/">/</a></td>
+        </tr><tr><td>content/sub.md</td>
+            <td>
+<del>?sub</del> (not accessible, see below)</td>
+        </tr><tr><td>content/sub/index.md</td>
+            <td>
+<a href="http://eceborgfzq.cluster021.hosting.ovh.net/?sub">?sub</a> (same as above)</td>
+        </tr><tr><td>content/sub/page.md</td>
+            <td><a href="http://eceborgfzq.cluster021.hosting.ovh.net/?sub/page">?sub/page</a></td>
+        </tr><tr><td>content/a/very/long/url.md</td>
+            <td>
+              <a href="http://eceborgfzq.cluster021.hosting.ovh.net/?a/very/long/url">?a/very/long/url</a>
+              (doesn't exist)
+            </td>
+        </tr></tbody></table></div>
+<p>If a file cannot be found, the file <code>content/404.md</code> will be shown. You can add
+<code>404.md</code> files to any directory. So, for example, if you wanted to use a special
+error page for your blog, you could simply create <code>content/blog/404.md</code>.</p>
+<p>Pico strictly separates contents of your website (the Markdown files in your
+<code>content</code> directory) and how these contents should be displayed (the Twig
+templates in your <code>themes</code> directory). However, not every file in your <code>content</code>
+directory might actually be a distinct page. For example, some themes (including
+Pico's default theme) use some special "hidden" file to manage meta data (like
+<code>_meta.md</code> in Pico's sample contents). Some other themes use a <code>_footer.md</code> to
+represent the contents of the website's footer. The common point is the <code>_</code>: all
+files and directories prefixed by a <code>_</code> in your <code>content</code> directory are hidden.
+These pages can't be accessed from a web browser, Pico will show a 404 error
+page instead.</p>
+<p>As a common practice, we recommend you to separate your contents and assets
+(like images, downloads, etc.). We even deny access to your <code>content</code> directory
+by default. If you want to use some assets (e.g. a image) in one of your content
+files, you should create an <code>assets</code> folder in Pico's root directory and upload
+your assets there. You can then access them in your Markdown using
+<code>%base_url%/assets/</code> for example:
+<code>![Image Title](%base_url%/assets/image.png)</code></p>
+<h3>Text File Markup</h3>
+<p>Text files are marked up using <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> and <a href="https://michelf.ca/projects/php-markdown/extra/">Markdown Extra</a>.
+They can also contain regular HTML.</p>
+<p>At the top of text files you can place a block comment and specify certain meta
+attributes of the page using <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> (the "YAML header"). For example:</p>
+<pre><code>---
+Title: Welcome
+Description: This description will go in the meta description tag
+Author: Joe Bloggs
+Date: 2001-04-25
+Robots: noindex,nofollow
+Template: index
+---</code></pre>
+<p>These values will be contained in the <code>{{ meta }}</code> variable in themes (see
+below). Meta headers sometimes have a special meaning: For instance, Pico not
+only passes through the <code>Date</code> meta header, but rather evaluates it to really
+"understand" when this page was created. This comes into play when you want to
+sort your pages not just alphabetically, but by date. Another example is the
+<code>Template</code> meta header: It controls what Twig template Pico uses to display
+this page (e.g. if you add <code>Template: blog</code>, Pico uses <code>blog.twig</code>).</p>
+<p>There are also certain variables that you can use in your text files:</p>
+<ul>
+<li><code>%site_title%</code> - The title of your Pico site</li>
+<li><code>%base_url%</code> - The URL to your Pico site; internal links
+can be specified using <code>%base_url%?sub/page</code></li>
+<li><code>%theme_url%</code> - The URL to the currently used theme</li>
+<li><code>%version%</code> - Pico's current version string (e.g. <code>2.0.0</code>)</li>
+<li><code>%meta.*%</code> - Access any meta variable of the current
+page, e.g. <code>%meta.author%</code> is replaced with <code>Joe Bloggs</code></li>
+</ul>
+<h3>Blogging</h3>
+<p>Pico is not blogging software - but makes it very easy for you to use it as a
+blog. You can find many plugins out there implementing typical blogging
+features like authentication, tagging, pagination and social plugins. See the
+below Plugins section for details.</p>
+<p>If you want to use Pico as a blogging software, you probably want to do
+something like the following:</p>
+<ol>
+<li>Put all your blog articles in a separate <code>blog</code> folder in your <code>content</code>
+directory. All these articles should have both a <code>Date</code> and <code>Template</code> meta
+header, the latter with e.g. <code>blog-post</code> as value (see Step 2).</li>
+<li>Create a new Twig template called <code>blog-post.twig</code> (this must match the
+<code>Template</code> meta header from Step 1) in your theme directory. This template
+probably isn't very different from your default <code>index.twig</code>, it specifies
+how your article pages will look like.</li>
+<li>Create a <code>blog.md</code> in your <code>content</code> folder and set its <code>Template</code> meta
+header to e.g. <code>blog</code>. Also create a <code>blog.twig</code> in your theme directory.
+This template will show a list of your articles, so you probably want to
+do something like this:
+<pre><code>{% for page in pages|sort_by("time")|reverse %}
+    {% if page.id starts with "blog/" and not page.hidden %}
+        &lt;div class="post"&gt;
+            &lt;h3&gt;&lt;a href="{{ page.url }}"&gt;{{ page.title }}&lt;/a&gt;&lt;/h3&gt;
+            &lt;p class="date"&gt;{{ page.date_formatted }}&lt;/p&gt;
+            &lt;p class="excerpt"&gt;{{ page.description }}&lt;/p&gt;
+        &lt;/div&gt;
+    {% endif %}
+{% endfor %}</code></pre></li>
+<li>Make sure to exclude blog articles from your page navigation. You can achieve
+this by adding <code>{% if not (page.id starts with "blog/") %}...{% endif %}</code>
+to the navigation loop (<code>{% for page in pages %}...{% endfor %}</code>) in your
+theme's <code>index.twig</code>.</li>
+</ol>
+<h2>Customization</h2>
+<p>Pico is highly customizable in two different ways: On the one hand you can
+change Pico's appearance by using themes, on the other hand you can add new
+functionality by using plugins. Doing the former includes changing Pico's HTML,
+CSS and JavaScript, the latter mostly consists of PHP programming.</p>
+<p>This is all Greek to you? Don't worry, you don't have to spend time on these
+techie talk - it's very easy to use one of the great themes or plugins others
+developed and released to the public. Please refer to the next sections for
+details.</p>
+<h3>Themes</h3>
+<p>You can create themes for your Pico installation in the <code>themes</code> folder. Check
+out the default theme for an example. Pico uses <a href="http://twig.sensiolabs.org/documentation">Twig</a> for template
+rendering. You can select your theme by setting the <code>theme</code> option in
+<code>config/config.yml</code> to the name of your theme folder.</p>
+<p>All themes must include an <code>index.twig</code> file to define the HTML structure of
+the theme. Below are the Twig variables that are available to use in your
+theme. Please note that paths (e.g. <code>{{ base_dir }}</code>) and URLs
+(e.g. <code>{{ base_url }}</code>) don't have a trailing slash.</p>
+<ul>
+<li><code>{{ site_title }}</code> - Shortcut to the site title (see <code>config/config.yml</code>)</li>
+<li><code>{{ config }}</code> - Contains the values you set in <code>config/config.yml</code>
+(e.g. <code>{{ config.theme }}</code> becomes <code>default</code>)</li>
+<li><code>{{ base_dir }}</code> - The path to your Pico root directory</li>
+<li><code>{{ base_url }}</code> - The URL to your Pico site; use Twig's <code>link</code> filter to
+specify internal links (e.g. <code>{{ "sub/page"|link }}</code>),
+this guarantees that your link works whether URL rewriting
+is enabled or not</li>
+<li><code>{{ theme_dir }}</code> - The path to the currently active theme</li>
+<li><code>{{ theme_url }}</code> - The URL to the currently active theme</li>
+<li><code>{{ version }}</code> - Pico's current version string (e.g. <code>2.0.0</code>)</li>
+<li><code>{{ meta }}</code> - Contains the meta values of the current page
+<ul>
+<li><code>{{ meta.title }}</code></li>
+<li><code>{{ meta.description }}</code></li>
+<li><code>{{ meta.author }}</code></li>
+<li><code>{{ meta.date }}</code></li>
+<li><code>{{ meta.date_formatted }}</code></li>
+<li><code>{{ meta.time }}</code></li>
+<li><code>{{ meta.robots }}</code></li>
+<li>...</li>
+</ul></li>
+<li><code>{{ content }}</code> - The content of the current page after it has been processed
+through Markdown</li>
+<li><code>{{ pages }}</code> - A collection of all the content pages in your site
+<ul>
+<li><code>{{ page.id }}</code> - The relative path to the content file (unique ID)</li>
+<li><code>{{ page.url }}</code> - The URL to the page</li>
+<li><code>{{ page.title }}</code> - The title of the page (YAML header)</li>
+<li><code>{{ page.description }}</code> - The description of the page (YAML header)</li>
+<li><code>{{ page.author }}</code> - The author of the page (YAML header)</li>
+<li><code>{{ page.time }}</code> - The <a href="https://en.wikipedia.org/wiki/Unix_timestamp">Unix timestamp</a> derived from
+the <code>Date</code> header</li>
+<li><code>{{ page.date }}</code> - The date of the page (YAML header)</li>
+<li><code>{{ page.date_formatted }}</code> - The formatted date of the page as specified
+by the <code>date_format</code> parameter in your
+<code>config/config.yml</code></li>
+<li><code>{{ page.raw_content }}</code> - The raw, not yet parsed contents of the page;
+use Twig's <code>content</code> filter to get the parsed
+contents of a page by passing its unique ID
+(e.g. <code>{{ "sub/page"|content }}</code>)</li>
+<li><code>{{ page.meta }}</code>- The meta values of the page (see <code>{{ meta }}</code> above)</li>
+<li><code>{{ page.previous_page }}</code> - The data of the respective previous page</li>
+<li><code>{{ page.next_page }}</code> - The data of the respective next page</li>
+<li><code>{{ page.tree_node }}</code> - The page's node in Pico's page tree</li>
+</ul></li>
+<li><code>{{ prev_page }}</code> - The data of the previous page (relative to <code>current_page</code>)</li>
+<li><code>{{ current_page }}</code> - The data of the current page (see <code>{{ pages }}</code> above)</li>
+<li><code>{{ next_page }}</code> - The data of the next page (relative to <code>current_page</code>)</li>
+</ul>
+<p>Pages can be used like the following:</p>
+<pre><code>&lt;ul class="nav"&gt;
+    {% for page in pages if not page.hidden %}
+        &lt;li&gt;&lt;a href="{{ page.url }}"&gt;{{ page.title }}&lt;/a&gt;&lt;/li&gt;
+    {% endfor %}
+&lt;/ul&gt;</code></pre>
+<p>Besides using the <code>{{ pages }}</code> list, you can also access pages using Pico's
+page tree. The page tree allows you to iterate through Pico's pages using a tree
+structure, so you can e.g. iterate just a page's direct children. It allows you
+to build recursive menus (like dropdowns) and to filter pages more easily. Just
+head over to Pico's <a href="http://picocms.org/in-depth/features/page-tree/">page tree documentation</a> for details.</p>
+<p>Additional to Twigs extensive list of filters, functions and tags, Pico also
+provides some useful additional filters to make theming easier.</p>
+<ul>
+<li>Pass the unique ID of a page to the <code>link</code> filter to return the page's URL
+(e.g. <code>{{ "sub/page"|link }}</code> gets <code>http://eceborgfzq.cluster021.hosting.ovh.net/?sub/page</code>).</li>
+<li>To get the parsed contents of a page, pass its unique ID to the <code>content</code>
+filter (e.g. <code>{{ "sub/page"|content }}</code>).</li>
+<li>You can parse any Markdown string using the <code>markdown</code> filter (e.g. you can
+use Markdown in the <code>description</code> meta variable and later parse it in your
+theme using <code>{{ meta.description|markdown }}</code>). You can pass meta data as
+parameter to replace <code>%meta.*%</code> placeholders (e.g.
+<code>{{ "Written *by *"|markdown(meta) }}</code> yields "Written by
+<em>John Doe</em>").</li>
+<li>Arrays can be sorted by one of its keys using the <code>sort_by</code> filter
+(e.g. <code>{% for page in pages|sort_by([ 'meta', 'nav' ]) %}...{% endfor %}</code>
+iterates through all pages, ordered by the <code>nav</code> meta header; please note the
+<code>[ 'meta', 'nav' ]</code> part of the example, it instructs Pico to sort by
+<code>page.meta.nav</code>). Items which couldn't be sorted are moved to the bottom of
+the array; you can specify <code>bottom</code> (move items to bottom; default), <code>top</code>
+(move items to top), <code>keep</code> (keep original order) or <code>remove</code> (remove items)
+as second parameter to change this behavior.</li>
+<li>You can return all values of a given array key using the <code>map</code> filter
+(e.g. <code>{{ pages|map("title") }}</code> returns all page titles).</li>
+<li>Use the <code>url_param</code> and <code>form_param</code> Twig functions to access HTTP GET (i.e.
+a URL's query string like <code>?some-variable=my-value</code>) and HTTP POST (i.e. data
+of a submitted form) parameters. This allows you to implement things like
+pagination, tags and categories, dynamic pages, and even more - with pure
+Twig! Simply head over to our <a href="http://picocms.org/in-depth/features/http-params/">introductory page for accessing HTTP
+parameters</a> for details.</li>
+</ul>
+<p>You can use different templates for different content files by specifying the
+<code>Template</code> meta header. Simply add e.g. <code>Template: blog</code> to the YAML header of
+a content file and Pico will use the <code>blog.twig</code> template in your theme folder
+to display the page.</p>
+<p>Pico's default theme isn't really intended to be used for a productive website,
+it's rather a starting point for creating your own theme. If the default theme
+isn't sufficient for you, and you don't want to create your own theme, you can
+use one of the great themes third-party developers and designers created in the
+past. As with plugins, you can find themes in <a href="https://github.com/picocms/Pico/wiki/Pico-Themes">our Wiki</a> and on
+<a href="http://picocms.org/themes/">our website</a>.</p>
+<h3>Plugins</h3>
+<h4>Plugins for users</h4>
+<p>Officially tested plugins can be found at <a href="http://picocms.org/plugins/">http://picocms.org/plugins/</a>, but
+there are many awesome third-party plugins out there! A good start point for
+discovery is <a href="https://github.com/picocms/Pico/wiki/Pico-Plugins">our Wiki</a>.</p>
+<p>Pico makes it very easy for you to add new features to your website using
+plugins. Just like Pico, you can install plugins either using <a href="https://getcomposer.org/">Composer</a>
+(e.g. <code>composer require phrozenbyte/pico-file-prefixes</code>), or manually by
+uploading the plugin's file (just for small plugins consisting of a single file,
+e.g. <code>PicoFilePrefixes.php</code>) or directory (e.g. <code>PicoFilePrefixes</code>) to your
+<code>plugins</code> directory. We always recommend you to use Composer whenever possible,
+because it makes updating both Pico and your plugins way easier. Anyway,
+depending on the plugin you want to install, you may have to go through some
+more steps (e.g. specifying config variables) to make the plugin work. Thus you
+should always check out the plugin's docs or <code>README.md</code> file to learn the
+necessary steps.</p>
+<p>Plugins which were written to work with Pico 1.0 and later can be enabled and
+disabled through your <code>config/config.yml</code>. If you want to e.g. disable the
+<code>PicoDeprecated</code> plugin, add the following line to your <code>config/config.yml</code>:
+<code>PicoDeprecated.enabled: false</code>. To force the plugin to be enabled, replace
+<code>false</code> by <code>true</code>.</p>
+<h4>Plugins for developers</h4>
+<p>You're a plugin developer? We love you guys! You can find tons of information
+about how to develop plugins at <a href="http://picocms.org/development/">http://picocms.org/development/</a>. If you've
+developed a plugin before and want to upgrade it to Pico 2.0, refer to the
+<a href="http://picocms.org/development/#upgrade">upgrade section of the docs</a>.</p>
+<h2>Config</h2>
+<p>Configuring Pico really is stupidly simple: Just create a <code>config/config.yml</code>
+to override the default Pico settings (and add your own custom settings). Take
+a look at the <code>config/config.yml.template</code> for a brief overview of the
+available settings and their defaults. To override a setting, simply copy the
+line from <code>config/config.yml.template</code> to <code>config/config.yml</code> and set your
+custom value.</p>
+<p>But we didn't stop there. Rather than having just a single config file, you can
+use a arbitrary number of config files. Simply create a <code>.yml</code> file in Pico's
+<code>config</code> dir and you're good to go. This allows you to add some structure to
+your config, like a separate config file for your theme (<code>config/my_theme.yml</code>).</p>
+<p>Please note that Pico loads config files in a special way you should be aware
+of. First of all it loads the main config file <code>config/config.yml</code>, and then
+any other <code>*.yml</code> file in Pico's <code>config</code> dir in alphabetical order. The file
+order is crucial: Config values which have been set already, cannot be
+overwritten by a succeeding file. For example, if you set <code>site_title: Pico</code> in
+<code>config/a.yml</code> and <code>site_title: My awesome site!</code> in <code>config/b.yml</code>, your site
+title will be "Pico".</p>
+<p>Since YAML files are plain text files, users might read your Pico config by
+navigating to <code>http://eceborgfzq.cluster021.hosting.ovh.net/config/config.yml</code>. This is no problem in the first
+place, but might get a problem if you use plugins that require you to store
+security-relevant data in the config (like credentials). Thus you should
+<em>always</em> make sure to configure your webserver to deny access to Pico's
+<code>config</code> dir. Just refer to the "URL Rewriting" section below. By following the
+instructions, you will not just enable URL rewriting, but also deny access to
+Pico's <code>config</code> dir.</p>
+<h3>URL Rewriting</h3>
+<p>Pico's default URLs (e.g. <a href="http://eceborgfzq.cluster021.hosting.ovh.net/?sub/page">http://eceborgfzq.cluster021.hosting.ovh.net/?sub/page</a>) already are very user-friendly.
+Additionally, Pico offers you a URL rewrite feature to make URLs even more
+user-friendly (e.g. <a href="http://eceborgfzq.cluster021.hosting.ovh.net/sub/page">http://eceborgfzq.cluster021.hosting.ovh.net/sub/page</a>). Below you'll find some basic info
+about how to configure your webserver proberly to enable URL rewriting.</p>
+<h4>Apache</h4>
+<p>If you're using the Apache web server, URL rewriting probably already is
+enabled - try it yourself, click on the <a href="http://eceborgfzq.cluster021.hosting.ovh.net/sub/page">second URL</a>. If
+URL rewriting doesn't work (you're getting <code>404 Not Found</code> error messages from
+Apache), please make sure to enable the <a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html"><code>mod_rewrite</code> module</a> and
+to enable <code>.htaccess</code> overrides. You might have to set the
+<a href="https://httpd.apache.org/docs/current/mod/core.html#allowoverride"><code>AllowOverride</code> directive</a> to <code>AllowOverride All</code> in your
+virtual host config file or global <code>httpd.conf</code>/<code>apache.conf</code>. Assuming
+rewritten URLs work, but Pico still shows no rewritten URLs, force URL
+rewriting by setting <code>rewrite_url: true</code> in your <code>config/config.yml</code>. If you
+rather get a <code>500 Internal Server Error</code> no matter what you do, try removing
+the <code>Options</code> directive from Pico's <code>.htaccess</code> file (it's the last line).</p>
+<h4>Nginx</h4>
+<p>If you're using Nginx, you can use the following config to enable URL rewriting
+(lines <code>5</code> to <code>8</code>) and denying access to Pico's internal files (lines <code>1</code> to
+<code>3</code>). You'll need to adjust the path (<code>/pico</code> on lines <code>1</code>, <code>2</code>, <code>5</code> and <code>7</code>)
+to match your installation directory. Additionally, you'll need to enable URL
+rewriting by setting <code>rewrite_url: true</code> in your <code>config/config.yml</code>. The Nginx
+config should provide the <em>bare minimum</em> you need for Pico. Nginx is a very
+extensive subject. If you have any trouble, please read through our
+<a href="http://picocms.org/in-depth/nginx/">Nginx config docs</a>.</p>
+<pre><code>location ~ ^/pico/((config|content|vendor|composer\.(json|lock|phar))(/|$)|(.+/)?\.(?!well-known(/|$))) {
+    try_files /pico/index.php$is_args$args =404;
+}
+
+location /pico/ {
+    index index.php;
+    try_files $uri $uri/ /pico/index.php$is_args$args;
+}</code></pre>
+<h4>Lighttpd</h4>
+<p>Pico runs smoothly on Lighttpd. You can use the following config to enable URL
+rewriting (lines <code>6</code> to <code>9</code>) and denying access to Pico's internal files (lines
+<code>1</code> to <code>4</code>). Make sure to adjust the path (<code>/pico</code> on lines <code>2</code>, <code>3</code> and <code>7</code>)
+to match your installation directory, and let Pico know about available URL
+rewriting by setting <code>rewrite_url: true</code> in your <code>config/config.yml</code>. The
+config below should provide the <em>bare minimum</em> you need for Pico.</p>
+<pre><code>url.rewrite-once = (
+    "^/pico/(config|content|vendor|composer\.(json|lock|phar))(/|$)" =&gt; "/pico/index.php",
+    "^/pico/(.+/)?\.(?!well-known(/|$))" =&gt; "/pico/index.php"
+)
+
+url.rewrite-if-not-file = (
+    "^/pico(/|$)" =&gt; "/pico/index.php"
+)</code></pre>
+<h2>Documentation</h2>
+<p>For more help have a look at the Pico documentation at <a href="http://picocms.org/docs">http://picocms.org/docs</a>.</p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <div class="social">
+                                    <a href="https://github.com/picocms/Pico" title="Visit us on GitHub" role="button">
+                        <span class="icon-octocat" aria-hidden="true"></span>
+                        <span class="sr-only">Visit us on GitHub</span>
+                    </a>
+                                    <a href="https://webchat.freenode.net/?channels=%23picocms" title="Join us on Freenode IRC Webchat" role="button">
+                        <span class="icon-chat" aria-hidden="true"></span>
+                        <span class="sr-only">Join us on Freenode IRC Webchat</span>
+                    </a>
+                                    <a href="https://www.bountysource.com/teams/picocms" title="Help us by creating/collecting bounties and pledging to fundraisers" role="button">
+                        <span class="icon-dollar" aria-hidden="true"></span>
+                        <span class="sr-only">Help us by creating/collecting bounties and pledging to fundraisers</span>
+                    </a>
+                            </div>
+            <p>
+                <a href="http://picocms.org/">Pico</a> was made by <a href="http://gilbert.pellegrom.me/">Gilbert Pellegrom</a>
+                and is maintained by <a href="https://github.com/picocms/Pico/graphs/contributors">The Pico Community</a>.
+                Released under the <a href="https://github.com/picocms/Pico/blob/master/LICENSE.md">MIT license</a>.
+            </p>
+        </div>
+    </div>
+
+    <script src="a_data/modernizr-3.js" type="text/javascript"></script>
+    <script src="a_data/utils.js" type="text/javascript"></script>
+    <script src="a_data/pico.js" type="text/javascript"></script>
+
+
+
+</body></html>
