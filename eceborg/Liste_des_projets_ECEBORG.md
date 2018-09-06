@@ -15,6 +15,8 @@
 1. Drone race rotormatch (Caroline B.)
 1. Projet potager robotisé
 1. Event démo sponsors
+1. Récupération de PC Aon
+1. Vente de kits d'électronique
 1. ...
 
-Avancements des projets sur hackaday, github pour les sources
+Avancement des projets sur hackaday, github pour les sources
