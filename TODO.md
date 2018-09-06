@@ -9,6 +9,9 @@
 - Sketch some systems to find best design
 
 ## ECEBORG
+Forum assos 20 septembre
+
+
 
 ### Admin
 - Call Marie to know how we are suposed to go to the SDI
@@ -22,3 +25,5 @@
 
 ### Partnerships
 - Denmark Zeryab
+
+Eceborg
