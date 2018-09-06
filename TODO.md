@@ -11,8 +11,6 @@
 ## ECEBORG
 Forum assos 20 septembre
 
-
-
 ### Admin
 - Call Marie to know how we are suposed to go to the SDI
 
@@ -27,3 +25,4 @@ Forum assos 20 septembre
 - Denmark Zeryab
 
 Eceborg
+contact@helpdesk.school
