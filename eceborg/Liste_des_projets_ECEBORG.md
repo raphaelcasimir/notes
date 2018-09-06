@@ -17,6 +17,7 @@
 1. Event démo sponsors
 1. Récupération de PC Aon
 1. Vente de kits d'électronique
+1. Projet ouverture de la porte par carte étudiant préenregistrée
 1. ...
 
 Avancement des projets sur hackaday, github pour les sources
