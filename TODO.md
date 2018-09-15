@@ -12,17 +12,22 @@
 Forum assos 20 septembre
 
 ### Admin
-- Call Marie to know how we are suposed to go to the SDI
+- Call Marie to know how we are supposed to go to the SDI
 
 ### ECEBORG DroneRace
-- Call event organizers to begin rules writing
+- Call event organizers rotormatch to begin rules writing
 - Speak with Nikko
 
-### Website
-- Put "in construction"
-
 ### Partnerships
-- Denmark Zeryab
+- Quanum
+- PCB assembly
+
+### Communication
+- Stickers MPA-pro find the right colors + colorfabb
+- Plastic glasses 100x quadri
+    + ecolocup 92€ TTC
+    + atelier du gobelet 85€ HT
+    + print pas cher 131 TTC avec livraison
 
 Eceborg
 contact@helpdesk.school

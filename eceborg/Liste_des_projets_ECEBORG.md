@@ -9,7 +9,7 @@
 1. Fin mars, 2 jours, coupe de Belgique de robotique
 1. Mi-avril : coupe d’Angleterre et coupe de suisse (déplacement peu probable en suisse)
 1. Fin avril : 3 jours, coupe d'Allemagne
-1. Début Mai coupe de France
+1. Fin Mai coupe de France
 
 # Autres projets
 1. Drone race rotormatch (Caroline B.)
@@ -18,3 +18,5 @@
 1. ...
 
 Avancements des projets sur hackaday, github pour les sources
+
+SLclOJ'Xjw.eOz8$
