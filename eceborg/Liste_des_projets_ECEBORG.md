@@ -23,5 +23,3 @@
 
 Avancements des projets sur hackaday, github pour les sources
 coupe@planete-sciences.org
-
-SLclOJ'Xjw.eOz8$
