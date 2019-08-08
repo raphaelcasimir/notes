@@ -1,5 +1,5 @@
 # Power consumption of the Pi In The Sky boards in typical use
-*Effects of frequency variation of and cores disabling on power consumption.*
+*Effects of frequency and core count variation on power consumption.*
 
 Test done by @raphaelcasimir
 
